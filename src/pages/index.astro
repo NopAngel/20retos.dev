@@ -1,0 +1,17 @@
+---
+import MainHome from "../components/sections/MainHome.astro";
+import ChallengesSection from "../components/sections/ChallengesSection.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  
+  <div class="absolute inset-0 -z-10 h-full w-full bg-transparent bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+	<main>
+		<section>
+		  <MainHome />
+		  <ChallengesSection />
+		</section>
+	  </main>
+  </div>
+</Layout>

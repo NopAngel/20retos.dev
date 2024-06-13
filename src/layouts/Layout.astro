@@ -1,0 +1,46 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html{
+		color-scheme: dark;
+	}
+
+	.animBG{
+		animation: openBG 1s forwards;
+	}
+
+	@keyframes openBG {
+		from{
+			transform: translateY(20px);
+			opacity: 0;
+			filter: blur(20px);
+		}
+
+		to{
+			transform: translateY(0);
+			opacity: 1;
+			filter:blur(0);
+		}
+	}
+
+</style>
